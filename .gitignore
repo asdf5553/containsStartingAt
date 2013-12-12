@@ -1,6 +1,17 @@
-*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
+public boolean containsStartingAt(String[] arr1, String[] arr2, int index)
+{
+  if (arr2.length>arr1.length)
+  {
+  return false;
+  }
+  int newindex = 0;
+  for (int ind=index; ind<(index+arr2.length); ind++)
+  {
+  if (arr1[ind]!=arr2[newindex])
+  {
+  return false;
+  }
+  newindex++;
+  }
+  return true;
+}
